@@ -1,3 +1,4 @@
 *.log
 config/s3.yml
+config/database.yml
 public/system/*
