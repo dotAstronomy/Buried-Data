@@ -1,0 +1,5 @@
+All datasets
+
+<%- @datasets.each do |d| -%>
+	<%= d.name %> <%= link_to "Show &rarr;", dataset_url(d) %> (<%= d.share_policy.name %>)
+<%- end -%>	

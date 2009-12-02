@@ -9,13 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091202105455) do
+ActiveRecord::Schema.define(:version => 20091202131503) do
 
   create_table "datasets", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.integer  "share_policy_id"
   end
 
   create_table "facilities", :force => true do |t|
@@ -43,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20091202105455) do
     t.string   "ra"
     t.string   "dec"
     t.integer  "dataset_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "share_policies", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

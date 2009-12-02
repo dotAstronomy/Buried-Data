@@ -1,1 +1,56 @@
-Give me your data!
+<%= render :partial => "shared/navigation" %>
+
+<h1 class="homepage">BuriedData.org</h1>
+
+
+<!-- top full width-->
+
+<div id="top_fullwidth" >
+    
+    <div class="full_width" >
+
+		<h1>I've started, you finish</h1>
+
+		<div class="button_right">
+			<%= render :partial => "shared/read_more" %>
+			
+		</div>
+
+	    <?php include("boxes/chromoscope.php"); ?>
+
+    </div>
+
+<div>
+
+
+<!-- tag cloud -->
+
+<div id="lsidebar" >
+    
+    <div class="box" >
+			<%= render :partial => "shared/tag_cloud" %>
+    </div>
+
+<div>
+
+<!-- quick query -->
+
+<div id="rsidebar" >
+    
+    <div class="box" >
+			<%= render :partial => "shared/quick_query" %>
+    </div>
+        
+</div>
+
+<!-- bottom full width-->
+
+<div id="bottom_fullwidth" >
+    
+    <div class="full_width" >
+			<%= render :partial => "shared/recent_datasets" %>
+    </div>
+
+<div>
+<%= render :partial => "shared/footer" %>
+
