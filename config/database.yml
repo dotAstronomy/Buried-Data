@@ -1,5 +1,0 @@
-development:
-  adapter: mysql
-  database: graveyard_development
-  username: root
-  password:
