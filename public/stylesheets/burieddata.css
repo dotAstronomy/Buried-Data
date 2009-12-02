@@ -25,12 +25,27 @@ body {
 }
 
 #header {
+	background: url(http://burieddata.org/main/styles/images/BuriedDataLogo.jpg) no-repeat;
 	height: 150px;
 	width: 940;
 }
 #full_width {
 	background: #ffffff;
 	padding: 15px 30px;
+}
+
+#lsidebar {
+	background: #ffffff;
+        padding: 15px 30px;
+	width: 400px;
+	float: left;
+}
+
+#rsidebar {
+        background: #ffffff;
+        padding: 15px 30px;
+        width: 400px;
+        float: right;
 }
 
 #top_fullwidth {
@@ -43,26 +58,56 @@ body {
         -webkit-border-top-right-radius: 5px;
 }
 
+#bottom_fullwidth {
+        background: #640B12;
+        color: #FFFFFF;
+        padding: 5px 30px;
+        -moz-border-radius-bottomleft: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+}
+
 
 
 #box {
 	background: #B18D59;
 	color: #000000;
 	width: 80%;
+	height: 200px;
 	padding: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 15x;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-        -webkit-border-top-left-radius: 5px;
+}
+
+#botton_right {
+	float: right;
+        background: #A16A4A
+        color: #000000;
+        width: 80%;
+        padding: 15px;
+        margin: 3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+}
+
+#botton_left {
+        float: left;
+        background: #A16A4A
+        color: #000000;
+        width: 80%; 
+        padding: 15px;
+        margin: 3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
 }
 
 img {
 	background: #464026;
-	padding: 3px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
 

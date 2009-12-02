@@ -1,55 +1,37 @@
-<%= render :partial => "shared/navigation" %>
-
-<h1 class="homepage">BuriedData.org</h1>
-
-<!-- top full width-->
-
-<div id="top_fullwidth" >
-    
-    <div class="full_width" >
-
-		<h1>I've started, you finish</h1>
-
-		<div class="button_right">
-			<%= render :partial => "shared/read_more" %>
-			
-		</div>
-		
-	    <%= render :partial => "shared/chromoscope" %>
-
-    </div>
-
-<div>
-
-
-<!-- tag cloud -->
-
-<div id="lsidebar" >
-    
-    <div class="box" >
-			<%# render :partial => "shared/tag_cloud" %>
-    </div>
-
-<div>
-
-<!-- quick query -->
-
-<div id="rsidebar" >
-    
-    <div class="box" >
-			<%= render :partial => "shared/quick_query" %>
-    </div>
-        
+<div id="page">
+<div id="header">
 </div>
 
-<!-- bottom full width-->
+<div id="top_fullwidth">
+div="top_fullwidth"
+</div>
 
-<div id="bottom_fullwidth" >
-    
-    <div class="full_width" >
-			<%= render :partial => "shared/recent_datasets", :locals => {:datasets => @datasets} %>
-    </div>
+<div id="full_width">
+full_width
 
-<div>
-<%= render :partial => "shared/footer" %>
+	<div id="box">
+	box inside full_width
+	</div>
+</div>
+<br>
+<div id="lsidebar">
+lsidebar
+        <div id="box">
+        <%= render :partial => "shared/recent_datasets", :locals => {:datasets => @datasets} %> 
+        </div>
+</div>
+
+<div id="rsidebar">
+rsidebar
+        <div id="box">
+        box 
+        </div>
+</div>
+
+<div id="bottom_fullwidth">
+div="bottom_fullwidth"
+</div>
+
+
+</div>
 
