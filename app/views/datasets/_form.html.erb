@@ -1,8 +1,9 @@
-<%- form_for @dataset do |f| -%>
+<%- form_for @dataset, :html => { :multipart => true } do |f| -%>
  <%= label :dataset, :name %> <%= f.text_field :name %><br />
  <%= label :dataset, :share_policy %>	<%= f.select("share_policy_id", @share_policies.collect {|p| [ p.name, p.id ] })
   %><br />
 	<%= f.hidden_field(:user_id, :value => "1") %>
+	<%= render :partial => "attachments", :locals => {:form => f} %>
 
 	<%= f.submit "Save" %>
 <%- end -%>

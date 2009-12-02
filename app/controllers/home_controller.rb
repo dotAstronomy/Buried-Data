@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    
+    @datasets = Dataset.recent
   end
   
   def about

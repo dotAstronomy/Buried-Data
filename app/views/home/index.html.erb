@@ -2,7 +2,6 @@
 
 <h1 class="homepage">BuriedData.org</h1>
 
-
 <!-- top full width-->
 
 <div id="top_fullwidth" >
@@ -16,8 +15,6 @@
 			
 		</div>
 
-	    <?php include("boxes/chromoscope.php"); ?>
-
     </div>
 
 <div>
@@ -28,7 +25,7 @@
 <div id="lsidebar" >
     
     <div class="box" >
-			<%= render :partial => "shared/tag_cloud" %>
+			<%# render :partial => "shared/tag_cloud" %>
     </div>
 
 <div>
@@ -48,7 +45,7 @@
 <div id="bottom_fullwidth" >
     
     <div class="full_width" >
-			<%= render :partial => "shared/recent_datasets" %>
+			<%= render :partial => "shared/recent_datasets", :locals => {:datasets => @datasets} %>
     </div>
 
 <div>

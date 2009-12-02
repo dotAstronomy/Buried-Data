@@ -1,7 +1,7 @@
 class DatasetsController < ApplicationController
   
   def index
-    @datasets = Dataset.find(:all)
+    @datasets = Dataset.recent
   end
   
   def show
@@ -11,6 +11,8 @@ class DatasetsController < ApplicationController
   def new
     @dataset= Dataset.new
     @share_policies = SharePolicy.find(:all)
+    @dataset.attachables.build
+    
   end
   
   def create

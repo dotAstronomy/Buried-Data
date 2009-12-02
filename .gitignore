@@ -1,2 +1,3 @@
 *.log
 config/s3.yml
+public/system/*

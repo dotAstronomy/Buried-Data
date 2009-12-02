@@ -18,4 +18,29 @@ module ApplicationHelper
       ""
     end
   end
+  
+  def remove_link_unless_new_record(fields)
+    unless fields.object.new_record?
+      out = ''
+      out << fields.hidden_field(:_delete)
+      out << link_to_function("remove", "$(this).up('.#{fields.object.class.name.underscore}').hide(); $(this).previous().value = '1'")
+      out
+    end
+  end
+  
+  def add_attachable_link(name, form)
+    link_to_function name do |page|
+      attachable = render(:partial => 'attachable', :locals => { :f => form, :attachable => Attachable.new })
+      page << %{
+        var new_attachable_id = "new_" + new Date().getTime();
+        $('attachables').insert({ bottom: "#{ escape_javascript attachable }".replace(/new_\\d+/g, new_attachable_id) });
+      }
+    end
+  end
+  
+  def remove_attachable_link(name)
+    link_to_function "Remove file" do |page|
+      page[name].remove()
+    end
+  end
 end

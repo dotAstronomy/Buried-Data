@@ -1,0 +1,8 @@
+<div class="attachable">
+	<%- f.fields_for :attachables, attachable do |attachable_form| -%>
+	<label style="border:none;"><span class="icon">Name</span><%= attachable_form.text_field :name %></label>
+	<label style="border:none;"><span class="icon">Description</span><%= attachable_form.text_field :description %></label>
+	<label style="border:none;"><span class="icon">File</span><%= attachable_form.file_field :file %></label>
+  <%# remove_link_unless_new_record(attachable_form) %>
+<%- end -%>
+</div>
