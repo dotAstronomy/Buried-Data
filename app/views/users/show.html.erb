@@ -1,0 +1,58 @@
+<h1>
+Were Rabbit
+</h1>
+
+
+<div id="lsidebar" >
+
+	<div class="box" >
+		<p>
+		Institution: Underground Observatory<br>
+		Level: Vegetable<br>
+		</p>
+    </div>
+        
+</div>
+
+<div id="rsidebar" >
+    
+    <div class="box" >
+		<%= render :partial => "shared/mugshot" %>
+    </div>
+        
+</div>
+
+
+<!-- bottom full width-->
+
+<div id="bottom_fullwidth" >
+    
+	<!--
+	my_data renders a list of the data that the user has uploaded
+	if they have uploaded stuff anonymously, it doesn't appear
+	and we don't say that this user uploads data anonymously either :)
+	-->
+    <div class="full_width" >
+		<%= render :partial => "shared/uploads" %>
+    </div>
+
+	<!--
+	downladed_data renders a list of the data that the user has downloaded
+	-->
+    <div class="full_width" >
+		<%= render :partial => "shared/downloads" %>
+    </div>
+
+		<div class="button_left">
+
+			<%= render :partial => "shared/rss_feed" %>
+
+		</div>
+		<div class="button_right">
+
+			<%= render :partial => "shared/contact_me" %>
+
+		</div>
+
+<div>
+
