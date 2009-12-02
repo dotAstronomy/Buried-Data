@@ -2,17 +2,28 @@ class DatasetsController < ApplicationController
   
   def index
     @datasets = Dataset.recent
+    
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @datasets.to_xml }
+      format.json { render :json => @datasets.to_json }
+    end
   end
   
   def show
     @dataset = Dataset.find(params[:id])
+    
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @dataset.to_xml }
+      format.json { render :json => @dataset.to_json }
+    end
   end
   
   def new
     @dataset= Dataset.new
     @share_policies = SharePolicy.find(:all)
     @dataset.attachables.build
-    
   end
   
   def create

@@ -1,5 +1,5 @@
-All datasets
+<h1>All datasets</h1>
 
 <%- @datasets.each do |d| -%>
-	<%= d.name %> <%= link_to "Show &rarr;", dataset_url(d) %> (<%= d.share_policy.name %>)
+	<%= d.name %> <%= link_to "Show &rarr;", dataset_url(d) %> (<%= d.share_policy.name %>)<br />
 <%- end -%>	
