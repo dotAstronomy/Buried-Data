@@ -1,1 +1,2 @@
 *.log
+config/s3.yml
