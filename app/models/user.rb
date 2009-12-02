@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :datasets
+  acts_as_authentic
 end
