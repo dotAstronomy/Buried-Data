@@ -8,4 +8,6 @@ class Dataset < ActiveRecord::Base
   named_scope :recent, lambda { |*args| {:conditions => ["created_at > ?", (args.first || 3.days.ago)]} }
   validates_presence_of :share_policy_id, :user_id, :name
   
+  
+  
 end
