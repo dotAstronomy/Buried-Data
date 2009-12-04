@@ -2,6 +2,10 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
 
+Webrat.configure do |config|
+  config.mode = :rails
+end
+
 class ActiveSupport::TestCase
   
   def self.should_have_attached_file(attachment)
