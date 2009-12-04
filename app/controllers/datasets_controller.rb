@@ -1,5 +1,7 @@
 class DatasetsController < ApplicationController
   
+  before_filter :require_user, :only => [ :new, :create, :edit ]
+
   def index
     @datasets = Dataset.recent
     
@@ -39,7 +41,13 @@ class DatasetsController < ApplicationController
   end
   
   def edit
+    @dataset = Dataset.find(params[:id])
     
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @dataset.to_xml }
+      format.json { render :json => @dataset.to_json }
+    end
   end
 
 end
