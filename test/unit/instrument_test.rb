@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class InstrumentTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  context "An Instrument" do
+    should_belong_to :facility
+    should_have_many :observations
+    
+  end 
 end

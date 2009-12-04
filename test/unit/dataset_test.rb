@@ -4,7 +4,7 @@ class DatasetTest < ActiveSupport::TestCase
   context "A Dataset" do
     should_have_many :observations, :attachables
     should_belong_to :user, :share_policy
-    should_validate_presence_of :share_policy_id
+    should_validate_presence_of :share_policy_id, :name, :user_id
     
     context "A standard dataset" do
       setup do
