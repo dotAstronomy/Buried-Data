@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "paperclip"
   config.gem "shoulda"
   config.gem "factory_girl"
+  config.gem 'webrat'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

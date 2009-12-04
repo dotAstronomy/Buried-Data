@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :require_user, :except => :new
+  
   def new
     @user = User.new
   end
@@ -25,5 +27,9 @@ class UsersController < ApplicationController
     else
       render :action => 'edit'
     end
+  end
+  
+  def profile
+    @user = current_user
   end
 end
