@@ -146,7 +146,7 @@ input.button {
 	border: 1px solid #EAEAEA;
 	padding: 5px;
 	background: #CCC url(images/buttonbg.gif) repeat-x left bottom; 
-	color: #333;/* color: #339900; */
+	color: #339900;/* color: #339900; */
 }
 
 /* search */
@@ -161,8 +161,9 @@ input.button {
 #sidebar #search img {
 	vertical-align: bottom;
 }
+ /* url(images/input.png) */
 #sidebar #search .textbox {
-	background: #FFF url(images/input.png) no-repeat top left; 
+	background: #FFF no-repeat top left; 
 	border: 1px solid #EAEAEA;
 	font-size: 11px;
 	padding: 3px;	
@@ -170,12 +171,19 @@ input.button {
 }
 #sidebar #search input.searchbutton { 
 	margin: 0; 
+	font: bold 12px 'Lucida Grande', Arial, Sans-serif; 
+	border: 1px solid #EAEAEA;
+	padding: 5px;
+	background: #CCC url(images/buttonbg.gif) repeat-x left bottom; 
+	color: #339900;/* color: #339900; */
+/*	margin: 0; 
 	font: bold 100% Arial, Sans-serif;
 	border: 1px solid #CCC; 
 	background: #CCC url(images/buttonbg.gif) repeat-x left bottom; 
+*/
 	padding: 1px; 
 	height: 25px;
-	color: #333;	
+/*	color: #333;	*/
 	width: 55px;
 }
 
@@ -233,7 +241,7 @@ input.button {
 	top: 0; left: 0;
 	width: 100%;
 	height: 25px;
-	background: #000;
+	/*background: #000;*/
     font: bold 1em 'Lucida Grande', Geneva, Verdana, Sans-Serif;
 } 
 #header-tabs ul {		
@@ -258,20 +266,20 @@ input.button {
    display:block;
    background: url(images/tabright.gif) no-repeat right top;
    padding:7px 15px 4px 8px;
-   color: #CCC;
+	color: #339900;
 }
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
 #header-tabs a span {float:none;}
 /* End IE5-Mac hack */
 #header-tabs a:hover span {
-	color:#FFF;
+	color:#77DD44;
 }
 #header-tabs a:hover {
 	background-position:0% -42px;
 }
 #header-tabs a:hover span { background-position: 100% -42px;}
 #header-tabs #current a { background-position:0% -42px; }
-#header-tabs #current a span { background-position:100% -42px; color: #FFF;}
+#header-tabs #current a span { background-position:100% -42px; color: #77DD44;}
 
 /* main content */
 #main {
