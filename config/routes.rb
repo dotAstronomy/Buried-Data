@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   
+  map.about "/about", :controller => :home, :action => :about
   map.login "/login", :controller => :user_sessions, :action => :new
   map.logout "/logout", :controller => :user_sessions, :action => :destroy
   map.signup '/signup', :controller => :users, :action => :new

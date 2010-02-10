@@ -1,0 +1,5 @@
+<%- if current_user -%>
+  Hi <%= current_user.username %>
+<%- else -%>
+	Please <%= link_to login_path, "Login" %> or <%= link_to signup_path, "Signup" %>
+<%- end -%>

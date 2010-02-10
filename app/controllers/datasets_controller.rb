@@ -24,6 +24,7 @@ class DatasetsController < ApplicationController
   
   def new
     @dataset= Dataset.new
+    @stage = 1
     @share_policies = SharePolicy.find(:all)
     @dataset.attachables.build
   end

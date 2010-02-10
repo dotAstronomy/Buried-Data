@@ -40,13 +40,6 @@ ActiveRecord::Schema.define(:version => 20091204181003) do
     t.datetime "updated_at"
   end
 
-  create_table "instrument_observations", :force => true do |t|
-    t.integer  "instrument_id"
-    t.integer  "observation_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "instruments", :force => true do |t|
     t.string   "name"
     t.integer  "facility_id"

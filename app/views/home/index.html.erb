@@ -1,39 +1,8 @@
-<div id="page">
 <div id="header">
+	<%= render :partial => "shared/login" %>
+	<h1>Buried Data</h1>	
+	<%= link_to "What's this all about?", about_url %>
 </div>
 
-<div id="top_fullwidth">
-Arfo
-
-div="top_fullwidth"
-</div>
-
-<div id="full_width">
-full_width
-
-	<div id="box">
-	box inside full_width
-	</div>
-</div>
-<br>
-<div id="lsidebar">
-lsidebar
-	<div id="box">
-	<%= render :partial => "shared/recent_datasets", :locals => {:datasets => @datasets} %> 
-	</div>
-</div>
-
-<div id="rsidebar">
-rsidebar
-        <div id="box">
-        box 
-        </div>
-</div>
-
-<div id="bottom_fullwidth">
-div="bottom_fullwidth"
-</div>
-
-
-</div>
-
+<%= render :partial => "shared/chromoscope" %>
+<%= render :partial => "shared/recent_datasets", :locals => { :datasets => @datasets } %> 
