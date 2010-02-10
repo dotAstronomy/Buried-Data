@@ -19,109 +19,34 @@
 <!-- wrap starts here -->	
 <div id="wrap">
 
-	<div id="header">
-	
-		<h1 id="logo-text">Buried<span class="gray">data</span></h1>			
-		<h2 id="slogan">I've started you finish</h2>	
-				
-		<div id="header-tabs">
-			<ul>
-				<li id="current"><a href="index.html"><span>Home</span></a></li>
-				<li><a href="index.html"><span>About</span></a></li>
-				<li><a href="index.html"><span>Upload</span></a></li>
-				<li><a href="index.html"><span>Download</span></a></li>
-				<li><a href="index.html"><span>Help</span></a></li>
-				<li><a href="index.html"><span>Login</span></a></li>			
-			</ul>
-		</div>				
-		
-	</div>
-	
+	<?php
+
+	include("header.php");
+
+	?>	
 
 
 <!-- content-wrap starts here -->
 	  <div id="content-wrap">
 	  
 	  		<div id="main"> 
-	
-				<a name="TemplateInfo"></a>
 
 
-				<h1>Buried Data in h1 header</h1>
+				<h1>Buried Data</h1>
 				
                 <p>Many of us have data that - if we're honest - is unlikely to see the light of day. It might have been neglected as we moved from job to job, and from place to place, or we might just have been distracted. Collaborators move on, or even leave astronomy, and their data stays behind. What if there was a place to leave your orphaned raw data, half-reduced data, or half-written papers? BuriedData.org is a halfway house and a refuge for data in need of care and attention. 
                 </p>
 
-				<h2>Buried Data in h2 header</h2>
-
-                <p>
+				<p><a href="http://dotastronomy.com/"><img src="images/dragon.jpg" width="100" height="120" alt="dotastronomy" class="float-left" /></a>
                BuriedData is also a dating service. We match interesting data with people who need it. Someone else's old observations might provide the key to a problem, or help you with your own research. BuriedData.org might reveal your pet object in a different wavelength, or provide support for a cherished observing proposal. Find research projects for undergraduates. Experts on a particular instrument or data reduction technique will find data ready for them to exploit. By starting not from scratch, but from wherever others have left off, you can turn data into results faster than before.
                 </p>
 				
-
-				<h2>Buried Data in h3 header</h2>
-
-                <p>
-               BuriedData is also a dating service. We match interesting data with people who need it. Someone else's old observations might provide the key to a problem, or help you with your own research. BuriedData.org might reveal your pet object in a different wavelength, or provide support for a cherished observing proposal. Find research projects for undergraduates. Experts on a particular instrument or data reduction technique will find data ready for them to exploit. By starting not from scratch, but from wherever others have left off, you can turn data into results faster than before.
-                </p>
 				<p class="comments">
 					<a href="index.html">Read more</a> |
 					<a href="index.html">Comments(7)</a> |
 					Oct 08, 2006
 				</p>
-			
-				<a name="SampleTags"></a>				
-				<h1>Sample Tags</h1>
-				
-				<h3>Code</h3>				
-				<p><code>
-				code-sample { <br />
-				font-weight: bold;<br />
-				font-style: italic;<br />				
-				}
-				</code></p>	
-				
-				<h3>Example Lists</h3>
-				
-				<ol>
-					<li><span>example of ordered list</span></li>
-					<li><span>uses span to color the numbers</span></li>								
-				</ol>	
-							
-				<ul>
-					<li><span>example of unordered list</span></li>
-					<li><span>uses span to color the bullets</span></li>								
-				</ul>				
-				
-				<h3>Blockquote</h3>			
-				<blockquote><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
-				nibh euismod tincidunt ut laoreet dolore magna aliquam erat....</p></blockquote>
-				
-				<h3>Image and text</h3>
-				<p><a href="http://getfirefox.com/"><img src="images/dragon.jpg" width="100" height="120" alt="firefox" class="float-left" /></a>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
-				Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
-				posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
-				odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra 
-				condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. 
-				In tristique orci porttitor ipsum. Aliquam ornare diam iaculis nibh. Proin luctus, velit pulvinar 
-				ullamcorper nonummy, mauris enim eleifend urna, congue egestas elit lectus eu est. 				
-				</p>
-								
-				<h3>Example Form</h3>
-				<form action="#">		
-				<p>				
-				<label>Name</label>
-				<input name="dname" value="Your Name" type="text" size="30" />
-				<label>Email</label>
-				<input name="demail" value="Your Email" type="text" size="30" />
-				<label>Your Comments</label>
-				<textarea rows="5" cols="5"></textarea>
-				<br />	
-				<input class="button" type="submit" />		
-				</p>		
-				</form>				
-				<br />		
+
 								
 	  		</div> 	
 			  
@@ -171,35 +96,8 @@
 		<!-- content-wrap ends here -->
 		</div>
 		
+		<?php
 
-				<div id="footer">
+		include("footer.html");
 
-					<p id="footer-left">
-						&copy; 2010 BuriedData.org |
-						<a href="http://www.dotastronomy.com/" title="dotAstronomy">A DotAstronomy product</a>
-					</p>
-
-					<p id="footer-right">
-						<a href="index.html">Home</a> |
-		                <a href="index.html">Sitemap</a> |
-		                <a href="index.html">RSS Feed</a> |
-		                <a href="http://validator.w3.org/check?uri=referer">XHTML</a> |
-						<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-					</p>
-
-				</div>	
-
-		<!-- wrap ends here -->		
-		</div>	
-
-
-	</body>
-
-
-	<!--
-
-	add any scripts you want e.g. google analytics, etc.
-
-	-->
-
-	</html>
+		?>
