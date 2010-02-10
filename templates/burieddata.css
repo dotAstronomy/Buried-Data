@@ -1,0 +1,386 @@
+/* ---------------------------------------------------
+
+   AUTHOR           :  	Erwin Aligam
+   WEBSITE          :   http://www.styleshout.com/
+   TEMPLATE NAME    : 	Techmania 1.0
+   TEMPLATE CODE    : 	S-0003
+   VERSION          :   1.2
+   LAST DATE MOD    :   January 21, 2010
+
+------------------------------------------------------ */
+ 
+/* ---------------------------------------------------
+   HTML ELEMENTS
+------------------------------------------------------ */
+
+/* top elements */
+* { margin:0; padding:0; outline:0; }
+
+body {
+    font: 13px/180% 'Lucida Grande', Geneva, Verdana, Sans-Serif;
+	background-color: #FFFFFF;
+ 	color: #555; 
+ 	text-align: center;
+ 	margin: 15px 0;
+}  
+
+/* links */
+a:link, a:visited {
+	color: #72A545;
+	background: inherit;
+	text-decoration: none;
+}
+a:hover { 
+	color: #006699;
+	background: inherit; 	 
+}
+ 
+/* headers */
+h1, h2, h3 {
+	font-family: 'Lucida Grande', Geneva, Verdana, Sans-Serif;
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.3em;
+	color: #339900;
+}
+h3 {
+	font-size: 1.2em;
+	color: #333;
+	letter-spacing: -0.5px;
+}
+
+h1, h2, h3 { 
+	padding: 0;
+	margin: 15px 20px;
+}
+
+p { 
+	padding: 0;
+	margin: 15px 20px;
+	text-align: justify;
+}
+
+ul, ol {
+	margin: 10px 30px;
+	padding: 0 15px;	
+	color: #72A545;	
+}
+ul span, ol span {
+	color: #666666;
+}
+
+/* images */
+img {
+	background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+	padding: 8px;
+}
+img.float-right {
+  margin: 5px 0px 10px 10px;  
+}
+img.float-left {
+  margin: 5px 10px 10px 0px;
+}
+
+code {
+  margin: 5px 0;
+  padding: 10px 15px;
+  text-align: left;
+  display: block;
+  overflow: auto;  
+  font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace;
+  /* white-space: pre; */
+  background: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  border-left: 5px solid #72A545;
+}
+acronym {
+  cursor: help;
+  border-bottom: 1px solid #777;
+}
+blockquote {
+	margin: 15px;
+ 	padding: 7px 10px 7px 32px;
+  	background: #FAFAFA url(images/quote.gif) no-repeat 8px 10px !important;
+	background-position: 10px 10px;
+	border: 1px solid #EAEAEA; 
+	border-left: 5px solid #72A545;  
+	font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* form elements */
+form {
+	margin:10px 15px;
+    padding: 10px 5px;
+	border: 1px solid #EAEAEA; 
+	background-color: #FAFAFA; 
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin:5px 0;
+}
+input {
+	padding: 4px 5px;
+	border:1px solid #eee;
+	font-size: 1em;
+	color:#777;
+}
+textarea {
+	width:400px;
+	padding:4px 5px;
+	font-size: 1em;
+	border:1px solid #eee;
+	height:100px;
+	display:block;
+	color:#777;
+}
+input.button { 
+	margin: 0; 
+	font: bolder 12px Arial, Sans-serif; 
+	border: 1px solid #EAEAEA;
+	padding: 5px;
+	background: #CCC url(images/buttonbg.gif) repeat-x left bottom; 
+	color: #333;/* color: #339900; */
+}
+
+/* search */
+#sidebar #search {
+	background: #f2f2f2;
+	margin: 0 10px;
+	padding: 5px 0;
+}
+#sidebar #search p {
+  padding: 0;
+}
+#sidebar #search img {
+	vertical-align: bottom;
+}
+#sidebar #search .textbox {
+	background: #FFF url(images/input.png) no-repeat top left; 
+	border: 1px solid #EAEAEA;
+	font-size: 11px;
+	padding: 3px;	
+	width: 110px;
+}
+#sidebar #search input.searchbutton { 
+	margin: 0; 
+	font: bold 100% Arial, Sans-serif;
+	border: 1px solid #CCC; 
+	background: #CCC url(images/buttonbg.gif) repeat-x left bottom; 
+	padding: 1px; 
+	height: 25px;
+	color: #333;	
+	width: 55px;
+}
+
+/* -------------------------------------------------------
+      LAYOUT 
+---------------------------------------------------------- */
+#wrap {
+   margin: 0 auto ;
+   padding:0;	
+   text-align: left;
+   background-color:#FFF;
+   width: 790px;  	
+}
+#content-wrap {
+	clear:both;
+   margin:0; padding:0;
+	width: 790px;		
+}
+
+/* header */
+#header {
+	position: relative;
+    clear:left;
+    width: 790px;
+	height: 135px; 
+	margin: 0; padding: 0;
+	background: #000 url(images/burieddata.jpg) no-repeat left bottom;			
+}
+#header h1#logo-text {
+	position: absolute;
+	margin: 0; padding: 0;
+	font: bold 3.8em 'Trebuchet MS', Arial, Sans-serif;
+	letter-spacing: -1px;
+	color: #FFF;
+	text-transform: none;
+	
+	/* change the values of top and right to adjust the position of the logo*/
+	top: 36px; right: 35px;	
+}
+#header h2#slogan {
+	position: absolute;
+	margin: 0; padding: 0;
+	font: 1.2em 'Lucida Gande', 'Trebuchet MS', Arial, Sans-serif;
+	text-transform: none;
+	letter-spacing: 1px;
+	color: #FFF;
+	
+	/* change the values of top and right to adjust the position of the slogan*/
+	top: 85px; right:35px;		
+}
+
+/* menu tabs */
+#header #header-tabs {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 25px;
+	background: #000;
+    font: bold 1em 'Lucida Grande', Geneva, Verdana, Sans-Serif;
+} 
+#header-tabs ul {		
+	margin:0;
+   padding:2px 0px 0px 7px;
+   list-style:none;
+}
+#header-tabs li {
+	display:inline;
+   margin:0;
+   padding:0;
+}
+#header-tabs a {
+	float:left;
+   background: url(images/tableft.gif) no-repeat left top;
+   margin:0;
+   padding:0 0 0 4px;
+   text-decoration:none;
+}
+#header-tabs a span {
+	float:left;
+   display:block;
+   background: url(images/tabright.gif) no-repeat right top;
+   padding:7px 15px 4px 8px;
+   color: #CCC;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#header-tabs a span {float:none;}
+/* End IE5-Mac hack */
+#header-tabs a:hover span {
+	color:#FFF;
+}
+#header-tabs a:hover {
+	background-position:0% -42px;
+}
+#header-tabs a:hover span { background-position: 100% -42px;}
+#header-tabs #current a { background-position:0% -42px; }
+#header-tabs #current a span { background-position:100% -42px; color: #FFF;}
+
+/* main content */
+#main {
+	float: left;
+	width: 530px;
+	margin: 15px 0 10px 5px; padding: 0;
+	background-color: inherit;
+    display: inline;
+}
+#main h1 {
+	padding: 8px 0 8px 25px;
+    margin: 10px 15px;
+    letter-spacing: .5px;
+	text-transform: none;
+	background: url(images/square_arrow.gif) no-repeat 0% .6em;
+	border-bottom: 2px solid #f2f2f2;	
+	color: #339900; 	
+}	
+
+/* sidebar */
+#sidebar {
+	float: right;
+	width: 245px;
+	margin: 15px 5px 10px 0; padding: 0;
+	background-color: inherit;
+    display: inline;
+}
+#sidebar h1 {
+	padding: 8px 0px 3px 25px;
+    margin: 10px 15px;
+    letter-spacing: .5px;
+	background: url(images/square_arrow.gif) no-repeat 0% .6em;
+	text-transform: none;	
+	color: #339900;
+}
+
+#sidebar ul.sidemenu {
+	list-style:none;
+	margin:10px 15px;
+	padding:0;
+    font-size: .9em;
+}
+#sidebar ul.sidemenu li {
+	margin-bottom:1px;
+	border: 1px solid #f2f2f2;
+}
+#sidebar ul.sidemenu a {
+	display: block;
+	font-weight: bold;
+	color: #555;
+	text-decoration:none;	
+	padding: 3px 5px 3px 10px;
+	background: #f2f2f2;
+	border-left: 5px solid #CCC;	
+	
+	min-height: 18px;	
+}
+
+* html body #sidebar ul.sidemenu a { height: 18px; }
+
+#sidebar ul.sidemenu a:hover {
+	padding:3px 5px 3px 10px;
+	background: #f2f2f2;
+	color: #339900;
+	border-left:5px solid #72A545;
+}
+
+
+/* footer */
+#footer { 
+	clear: both;
+	height: 50px;
+	color: #CCC;
+	background: #000;
+	margin: 0;	
+	font-size: .9em;
+}
+#footer a { 
+	text-decoration: none; 
+   	color: #FFF;
+}
+#footer #footer-left {
+	width: 50%;
+	float: left;
+	margin: 0; padding: 10px 0 10px 15px;
+}
+#footer #footer-right {
+	width: 40%;
+	float: right;
+	margin: 0; padding: 10px 15px 10px 0;
+    text-align: right;
+}
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+
+/* additional classes */
+.clear {	clear:both;	} 
+.hide  { display: none; }
+.gray  { color: #CCC; }
+
+.comments { 
+	color: #333; 
+	background: #FAFAFA;
+    border: 1px solid #EAEAEA;
+	padding: 5px 10px;
+	margin-top: 20px;
+    font-size: .9em;
+}
