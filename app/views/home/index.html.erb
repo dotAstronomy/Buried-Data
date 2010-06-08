@@ -1,8 +1,137 @@
-<div id="header">
-	<%= render :partial => "shared/login" %>
-	<h1>Buried Data</h1>	
-	<%= link_to "What's this all about?", about_url %>
+<!-- header starts-->
+<div id="header-wrap"><div id="header" class="container_16">						
+	
+	<h1 id="logo-text"><%= link_to "Buried Data", :controller => "home" %></h1>
+	<p id="intro">I've started, you finish</p>
+	
+	<!-- navigation -->
+	<div  id="nav">
+		<ul>
+			<li id="current"><%= link_to "Home", :controller => "home" %></li>
+			<li><%= link_to "Upload Data", :controller => "datasets", :action => "new" %></li>
+			<li><a href="/blog">Blog</a></li>
+			<li><%= link_to "About", about_path %></li>		
+		</ul>		
+	</div>		
+	
+	<form id="quick-search" action="index.html" method="get" >
+		<p>
+		<label for="qsearch">Search:</label>
+		<input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" onfocus="this.value=''" onblur="if (this.value==''){this.value='Search...';}return;" />
+		<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="/images/search.gif" />
+		</p>
+	</form>					
+
+<!-- header ends here -->
+	</div>
 </div>
 
-<%= render :partial => "shared/chromoscope" %>
-<%= render :partial => "shared/recent_datasets", :locals => { :datasets => @datasets } %> 
+<div id="content-outer"><div id="content-wrapper" class="container_16">
+
+	<!-- main -->
+	<div id="main" class="grid_8">
+			
+		
+		
+		
+
+		
+
+	
+	<!-- main ends -->
+	</div>
+		
+
+<!-- contents end here -->	
+</div></div>
+
+<!-- footer starts here -->	
+<div id="footer-wrapper" class="container_16">
+
+	<div id="footer-content">
+	
+		<div class="grid_8">
+	
+			<h3>Resource Links</h3>			
+			<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+			odio, ac blandit ante orci ut diam. <a href="index.html">Read more...</a>
+			</p>
+
+			<ul class="footer-list">				
+                  <li><a href="http://www.dreamtemplate.com" title="Website Templates">DreamTemplate -
+                      <span>Over 6,000+ Premium Web Templates</span></a>
+                  </li>
+				<li><a href="http://www.themelayouts.com" title="WordPress Themes">ThemeLayouts -
+                      <span>Premium WordPress &amp; Joomla Themes</span></a>
+                  </li>
+				<li><a href="http://www.imhosted.com" title="Website Hosting">ImHosted.com -
+                      <span>Affordable Web Hosting Provider</span></a>
+                  </li>
+				<li><a href="http://www.dreamstock.com" title="Stock Photos">DreamStock -
+                      <span>Download Amazing Stock Photos</span></a>
+                  </li>
+				<li><a href="http://www.evrsoft.com" title="Website Builder">Evrsoft -
+                      <span>Website Builder Software &amp; Tools</span></a>
+                  </li>
+				<li><a href="http://www.seostation.com" title="SEO">SEOStation -
+                      <span>Increase Your Site Rankings</span></a>
+                  </li>
+			</ul>			
+					
+		</div>
+		
+		<div class="grid_8">
+				
+			<h3>Image Gallery </h3>					
+			<p class="thumbs">
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>	
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>													
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>													
+				<a href="index.html"><img src="images/thumb.jpg" width="40" height="40" alt="thumbnail" /></a>
+			</p>	
+		
+			<h3>About</h3>			
+			<p>
+			<a href="http://getfirefox.com/"><img src="images/gravatar.jpg" width="40" height="40" alt="firefox" class="float-left" /></a>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu 
+			posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum 
+			odio, ac blandit ante orci ut diam.</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. 
+			Cras id urna. <a href="index.html">Learn more...</a></p>
+				
+		</div>	
+	
+	</div>
+
+	<div id="footer-bottom">
+
+		<p class="bottom-left">			
+		&nbsp; &copy;2008 All your copyright info here &nbsp; &nbsp;
+		<a href="http://www.stylishtemplate.com/" title="Website Templates">website templates</a> by <a href="http://www.styleshout.com/">styleshout</a>
+		</p>	
+		
+		<p class="bottom-right" >
+			<a href="index.html">Home</a> |
+			<a href="index.html">Sitemap</a> |
+			<a href="index.html">RSS Feed</a> |						
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | 
+	   	    <a href="http://validator.w3.org/check/referer">XHTML</a>
+		</p>
+
+	</div>	
+		
+</div>
+<!-- footer ends here -->

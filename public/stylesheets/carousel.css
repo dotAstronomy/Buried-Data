@@ -1,0 +1,83 @@
+#container {
+	background-color: white;
+	
+}
+#carousel-wrapper {
+	width: 940px;
+	overflow: hidden;
+	padding-top:0em;
+	
+}
+
+#content-wrapper form{
+	background:#f5f4f3;
+	
+}
+
+#carousel-wrapper label {
+	display: block;
+	font-weight: bold;
+	font-size:1.1em;
+	line-height:2em;
+}
+#carousel-wrapper input {
+	margin-bottom: 1.5em;
+	width: 300px;
+}
+#carousel-wrapper textarea {
+	margin-bottom: 1em;
+	width: 300px;
+	height: 8em;
+}
+#carousel-content {
+	position:relative;
+	width: 940px;
+	min-height: 200px;
+}
+.carousel-slide {
+	padding: 0px;
+	float: left;
+
+}
+
+
+
+#steps {
+	width:940px;
+	margin:0px auto;
+	display:block;
+	min-height: 3.5em;
+}
+.step {
+	display: block;
+	float: left;
+	border-bottom: 4px solid #777;
+	padding-bottom: 5px;
+	color: #777;
+}
+
+em{font-style:italic;}
+
+.step h3{
+	display:inline;
+	padding:0px 5px 0px 0px;
+}
+
+.position{
+	padding-left:10px;
+	color:#bebebe;
+}
+
+.help_container{
+	background: url(../images/left_arrow.gif) 0px 0px no-repeat; /*20px 0 equals horizontal and vertical position of arrow. Adjust as desired (ie: 20px -5px).*/
+	padding:0px;
+	margin:0px;
+}
+
+.help{
+	padding:10px;	
+	margin-left:7px;
+	color:#3c3c3c;
+	background-color:#9fcc7f;
+}
+
