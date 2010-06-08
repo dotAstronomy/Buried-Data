@@ -37,10 +37,10 @@
 		<div id="carousel-wrapper">
 			<div id="carousel-content">
 				<div class="carousel-slide">
-					<label for="object">Object name</label><input type="text" id="object_name" value="e.g. NGC 884" name="object" onFocus="this.value='';show_element('name_help');" onblur="if (this.value==''){this.value='e.g. NGC 884';} lookUP('#object_name');hide_element('name_help'); return;" /> <span id="lookupresult" class="position"></span><span id="name_help" class="help_container" style="display:none;"><span class="help">Enter your object name, targets will be resolved using LookUp</span></span>
+					<label for="object">Object name</label><input type="text" id="object_name" value="e.g. NGC 884" name="object" onFocus="if(this.value=='e.g. NGC 884'){this.value='';}show_element('name_help');" onblur="if (this.value==''){this.value='e.g. NGC 884';} lookUP('#object_name');hide_element('name_help'); return;" /> <span id="lookupresult" class="position"></span><span id="name_help" class="help_container" style="display:none;"><span class="help">Enter your object name, targets will be resolved using LookUp</span></span>
 					<br />
 					<label for="lambda">Wavelength</label> 
-						<input type="text" value="e.g. 656 nm" name="lambda" onfocus="this.value='';show_element('wavelength_help');" onblur="if (this.value==''){this.value='e.g. 656 nm';}hide_element('wavelength_help');return;" />
+						<input type="text" value="e.g. 656 nm" name="lambda" onfocus="if(this.value=='e.g. 656 nm'){this.value='';}show_element('wavelength_help');" onblur="if (this.value==''){this.value='e.g. 656 nm';}hide_element('wavelength_help');return;" />
 						<span class="position">&nbsp;</span>
 						<span id="wavelength_help" class="help_container" style="display:none;">
 							<span class="help">Enter the wavelength for these observations</span>
