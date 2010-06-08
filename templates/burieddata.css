@@ -7,6 +7,8 @@
    VERSION          :   1.2
    LAST DATE MOD    :   January 21, 2010
 
+Modified for dotAstronomy and BuriedData
+
 ------------------------------------------------------ */
  
 /* ---------------------------------------------------
@@ -19,7 +21,7 @@
 body {
     font: 13px/180% 'Lucida Grande', Geneva, Verdana, Sans-Serif;
 	background-color: #FFFFFF;
- 	color: #555; 
+ 	color: #444; 
  	text-align: center;
  	margin: 15px 0;
 }  
@@ -64,13 +66,17 @@ p {
 	text-align: justify;
 }
 
+li.comments {
+	list-style-image: url(images/square_arrow.gif);
+}
+
 ul, ol {
 	margin: 10px 30px;
 	padding: 0 15px;	
 	color: #72A545;	
 }
 ul span, ol span {
-	color: #666666;
+	color: #555;
 }
 
 /* images */
@@ -78,6 +84,11 @@ img {
 	background: #FAFAFA;
     border: 1px solid #DCDCDC;
 	padding: 8px;
+}
+img.chromoscope {
+	background: inherit;
+    border: none;
+	padding: 0px;
 }
 img.float-right {
   margin: 5px 0px 10px 10px;  
@@ -132,7 +143,7 @@ input {
 	color:#777;
 }
 textarea {
-	width:400px;
+	width:100%;
 	padding:4px 5px;
 	font-size: 1em;
 	border:1px solid #eee;
@@ -282,6 +293,31 @@ input.button {
 #header-tabs #current a span { background-position:100% -42px; color: #77DD44;}
 
 /* main content */
+#left {
+	float: left;
+	width: 460px;
+	margin: 15px 0 10px 5px; padding: 0;
+	background-color: inherit;
+    display: inline;
+}
+
+#right {
+	float: right;
+	width: 320px;
+	margin: 15px 5px 10px 0; padding: 0;
+	background-color: inherit;
+    display: inline;
+}
+
+#chromoscopeholder {
+	background: #FAFAFA;
+	width: 300px;
+	height: 200px;
+	overflow: scroll;
+    border: 1px solid #DCDCDC;
+	padding: 0px;
+}
+
 #main {
 	float: left;
 	width: 530px;
