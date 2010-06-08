@@ -28,6 +28,7 @@
 <div id="content-outer">
 	<div id="content-wrapper" class="container_16">			
 		<%= tabulated_error_messages_for "dataset" %>
+		<a name="uploaddata"></a>
 		<div id="steps">
 			<span class="step"><h3>Step 1</h3> &mdash; <em>describe</em></span>
 			<span class="step"><h3>Step 2</h3> &mdash; <em>more info</em></span>
@@ -37,30 +38,32 @@
 		<div id="carousel-wrapper">
 			<div id="carousel-content">
 				<div class="carousel-slide">
-					<label for="object">Object name</label><input type="text" id="object_name" value="e.g. NGC 884" name="object" onFocus="if(this.value=='e.g. NGC 884'){this.value='';}show_element('name_help');" onblur="if (this.value==''){this.value='e.g. NGC 884';} lookUP('#object_name');hide_element('name_help'); return;" /> <span id="lookupresult" class="position"></span><span id="name_help" class="help_container" style="display:none;"><span class="help">Enter your object name, targets will be resolved using LookUp</span></span>
+					<label for="object">Object name</label><input type="text" id="object_name" value="e.g. NGC 884" name="object" onFocus="if(this.value=='e.g. NGC 884'){this.value='';}show_element('name_help');" onblur="if (this.value==''){this.value='e.g. NGC 884';} lookUP('#object_name');hide_element('name_help'); return;" /> <span class="position"></span><span id="name_help" class="help_container" style="display:none;"><span class="help">Enter your object name. We will try to resolve its position using LookUp.</span></span><span id="lookupresult" class="position"></span>
 					<br />
 					<label for="lambda">Wavelength</label> 
 						<input type="text" value="e.g. 656 nm" name="lambda" onfocus="if(this.value=='e.g. 656 nm'){this.value='';}show_element('wavelength_help');" onblur="if (this.value==''){this.value='e.g. 656 nm';}hide_element('wavelength_help');return;" />
 						<span class="position">&nbsp;</span>
 						<span id="wavelength_help" class="help_container" style="display:none;">
-							<span class="help">Enter the wavelength for these observations</span>
+							<span class="help">Enter the wavelength (or range of wavelengths) for these observations</span>
 						</span>
 					<br />
 					<label for="author">Author(s)</label> 
-					<input type="text" value="e.g. C.J. Lintott" name="authors" onfocus="this.value='';show_element('authors_help');" onblur="if (this.value==''){this.value='e.g. C.J. Lintott';}hide_element('authors_help');return;" />
+					<input type="text" value="e.g. A. Einstein" name="authors" onfocus="if(this.value=='e.g. A. Einstein'){ this.value=''; }show_element('authors_help');" onblur="if (this.value==''){this.value='e.g. A. Einstein';}hide_element('authors_help');return;" />
 					<span class="position">&nbsp;</span>
 					<span id="authors_help" class="help_container" style="display:none;">
-						<span class="help">Enter one or more author separated with commas</span>
+						<span class="help">Enter one or more authors separated with commas</span>
 					</span>
 					<br /><label for="desc">Description</label> <textarea name="desc"></textarea>
-					<br /><a href="#" onClick="step(+1)">Next</a>
+					<br /><a href="#uploaddata" onClick="step(+1)">Next</a>
 				</div>
 				<div class="carousel-slide">
-					<label for="pos">Position</label> <input type="text" value="e.g. 10:34:35.6 +23:10:09" id="lookupresults" name="pos" />
-					<br /><a href="#" onClick="step(-1)">Back</a> | <a href="#" onClick="step(+1)">Next</a>
+					Please add more information to help people find and use your data. You'll have opportunity to add more details later.
+					<br />
+					<label for="pos">Position</label> <input type="text" value="e.g. 10:34:35.6 +23:10:09" id="lookupresults" name="pos" onfocus="if(this.value=='e.g. 10:34:35.6 +23:10:09'){ this.value=''; }" onblur="if (this.value==''){this.value='e.g. 10:34:35.6 +23:10:09';}return;" />
+					<br /><a href="#uploaddata" onClick="step(-1);return false">Back</a> | <a href="#uploaddata" onClick="step(+1);return false">Next</a>
 				</div>
 				<div class="carousel-slide">
-					<br /><a href="#" onClick="step(-1)">Back</a> | Submit everything. This button should be greyed out until the files have finished uploading.
+					<br /><a href="#uploaddata" onClick="step(-1)">Back</a> | Submit everything. This button should be greyed out until the files have finished uploading.
 				</div>
 			</div>
 		</div>
