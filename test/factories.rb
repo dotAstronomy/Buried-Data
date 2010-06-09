@@ -30,7 +30,3 @@ Factory.define :share_policy do |d|
   d.description "Awesomely unrestrictive"
 end
 
-Factory.define :facility do |f|
-  f.name        "The bestest telescope in the world"
-  f.location    "Warm in the day, crisp, clear and cool at night (wherever that is)"
-end
