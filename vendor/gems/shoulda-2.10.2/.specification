@@ -1,6 +1,10 @@
 --- !ruby/object:Gem::Specification 
 name: shoulda
 version: !ruby/object:Gem::Version 
+  segments: 
+  - 2
+  - 10
+  - 2
   version: 2.10.2
 platform: ruby
 authors: 
@@ -9,7 +13,7 @@ autorequire:
 bindir: bin
 cert_chain: []
 
-date: 2009-07-15 00:00:00 +02:00
+date: 2009-07-14 23:00:00 +01:00
 default_executable: convert_to_should_syntax
 dependencies: []
 
@@ -205,18 +209,22 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      segments: 
+      - 0
       version: "0"
   version: 
 required_rubygems_version: !ruby/object:Gem::Requirement 
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
+      segments: 
+      - 0
       version: "0"
   version: 
 requirements: []
 
 rubyforge_project: shoulda
-rubygems_version: 1.3.5
+rubygems_version: 1.3.6
 signing_key: 
 specification_version: 3
 summary: Making tests easy on the fingers and eyes
