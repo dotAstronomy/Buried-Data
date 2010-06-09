@@ -4,3 +4,4 @@ config/database.yml
 config/deploy.rb
 config/recipes
 public/system/*
+db/*.sqlite3

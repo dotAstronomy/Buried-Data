@@ -19,6 +19,8 @@ function getLookUPResults(jData) {
 			var str = ra.decimal+','+dec.decimal;
 			var msg = ra.h+":"+ra.m+":"+ra.s+", "+dec.d+":"+dec.m+":"+dec.s+' ('+coordsys+' '+equinox+')';
 			$('#lookupresult').html('<em>'+ msg+ '</em>')
+			var val = $('#lookupresults').val();
+			if(val=='e.g. 10:34:35.6 +23:10:09') $('#lookupresults').val(msg)
 		}else{
 			// Nothing found
 		}
