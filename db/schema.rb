@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100609092620) do
+ActiveRecord::Schema.define(:version => 20100609093520) do
 
   create_table "attachables", :force => true do |t|
     t.integer  "dataset_id"
@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(:version => 20100609092620) do
   end
 
   create_table "datasets", :force => true do |t|
-    t.string   "name"
+    t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
     t.integer  "share_policy_id"
-    t.boolean  "public"
+    t.boolean  "available"
   end
 
   create_table "share_policies", :force => true do |t|
@@ -49,4 +49,5 @@ ActiveRecord::Schema.define(:version => 20100609092620) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 end

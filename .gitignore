@@ -1,7 +1,10 @@
-*.log
+.bundle
+log/*.log
+tmp/**/*
 config/s3.yml
 config/database.yml
 config/deploy.rb
 config/recipes
 public/system/*
 db/*.sqlite3
+

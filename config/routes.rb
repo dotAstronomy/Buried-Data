@@ -1,21 +1,13 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :user_sessions
-
-  map.resources :users
-
-  map.resources :datasets, :has_many => [ :observations ]
-  
-  map.resources :observations
-  
-
-  map.root :controller => "home"
-  
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
-  
-  map.about "/about", :controller => :home, :action => :about
-  map.login "/login", :controller => :user_sessions, :action => :new
-  map.logout "/logout", :controller => :user_sessions, :action => :destroy
-  map.signup '/signup', :controller => :users, :action => :new
-  map.profile '/profile', :controller => :users, :action => :profile
+BuriedData::Application.routes.draw do
+  resources :user_sessions
+  resources :users
+  resources :datasets
+  resources :observations
+  match '/' => 'home#index'
+  match '/:controller(/:action(/:id))'
+  match '/about' => 'home#about', :as => :about
+  match '/login' => 'user_sessions#new', :as => :login
+  match '/logout' => 'user_sessions#destroy', :as => :logout
+  match '/signup' => 'users#new', :as => :signup
+  match '/profile' => 'users#profile', :as => :profile
 end

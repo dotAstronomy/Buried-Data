@@ -5,15 +5,13 @@ Factory.sequence :name do |n|
 end
 
 Factory.define :public_dataset, :class => Dataset do |d|
-  d.name          "Dataset 1"
-  d.public        true
+  d.title          "Dataset 1"
   d.user          { |user| user.association(:standard_user)}
   d.share_policy  { |policy| policy.association(:share_policy)}
 end
 
 Factory.define :hidden_dataset, :class => Dataset do |d|
   d.name          "Dataset 1"
-  d.public        false
   d.user          { |user| user.association(:standard_user)}
   d.share_policy  { |policy| policy.association(:share_policy)}
 end

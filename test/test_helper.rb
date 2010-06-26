@@ -1,10 +1,12 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
-require 'test_help'
+require 'rails/test_help'
+require 'shoulda'
+require 'factory_girl_rails'
+require 'webrat'
 
-Webrat.configure do |config|
-  config.mode = :rails
-end
+Factory.definition_file_paths = [ File.join(Rails.root, 'test', 'factories') ]
+Factory.find_definitions
 
 class ActiveSupport::TestCase
   
@@ -24,6 +26,38 @@ class ActiveSupport::TestCase
     end
   end
   
+  def api_login
+    @request.env['HTTPS'] = 'on'
+    @request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(SiteConfig.api_username, SiteConfig.api_password)
+  end
+  
+  def admin_cas_login
+    @user = Factory :admin_user
+    @request.session[:cas_user] = @user.name
+    @request.session[:cas_extra_attributes] = {}
+    @request.session[:cas_extra_attributes]['id'] = @user.id
+    @request.session[:cas_extra_attributes]['api_key'] = @user.api_key
+    CASClient::Frameworks::Rails::Filter.stubs(:filter).returns(true)
+  end
+  
+  def standard_cas_login
+    @user = Factory :zooniverse_user
+    @request.session[:cas_user] = @user.name
+    @request.session[:cas_extra_attributes] = {}
+    @request.session[:cas_extra_attributes]['id'] = @user.id
+    @request.session[:cas_extra_attributes]['api_key'] = @user.api_key
+    CASClient::Frameworks::Rails::Filter.stubs(:filter).returns(true)
+  end
+  
+  def clear_workflow_session
+    @request.session[:current_workflow_id] = nil
+    @request.session[:current_workflow_task_id] = nil
+    @request.session[:current_asset_ids] = nil
+    @request.session[:current_asset_locations] = nil
+    @request.session[:result] = nil
+    @request.session[:started] = nil
+  end
+    
   # Transactional fixtures accelerate your tests by wrapping each test method
   # in a transaction that's rolled back on completion.  This ensures that the
   # test database remains unchanged so your fixtures don't have to be reloaded
@@ -54,6 +88,6 @@ class ActiveSupport::TestCase
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
   fixtures :all
-
+  
   # Add more helper methods to be used by all tests here...
 end
