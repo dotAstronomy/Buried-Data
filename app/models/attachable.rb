@@ -3,7 +3,7 @@ class Attachable < ActiveRecord::Base
   
   has_attached_file :file,
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :bucket => "buried-data",
                     :path => "attachables/:filename"
                     

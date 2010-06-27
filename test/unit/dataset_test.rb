@@ -2,9 +2,12 @@ require 'test_helper'
 
 class DatasetTest < ActiveSupport::TestCase
   context "A Dataset" do
-    should_have_many :attachables
-    should_belong_to :user, :share_policy
-    should_validate_presence_of :share_policy_id, :title, :user_id
+    should have_many :attachables
+    should belong_to :user
+    should belong_to :share_policy
+    should validate_presence_of :share_policy_id
+    should validate_presence_of :title
+    should validate_presence_of :user_id
     
     # context "A standard dataset" do
     #   setup do

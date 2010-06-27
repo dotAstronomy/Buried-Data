@@ -1,6 +1,6 @@
-<h1><%= @dataset.name %></h1>
+<h1><%= @dataset.title %></h1>
 <%- @dataset.attachables.each do |a| -%>
-	<%= @dataset.name %><br />	
+	<%= @dataset.title %><br />	
 	<%= @dataset.description %><br />
 	<%= link_to "Download", a.file.url %>
 <%- end -%>	

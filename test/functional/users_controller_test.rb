@@ -13,8 +13,8 @@ class UsersControllerTest < ActionController::TestCase
         get :new
       end
 
-      should_render_template :new
-      should_respond_with :success
+      should render_template :new
+      should respond_with :success
     end   
     
     context "When accessing edit but not logged in" do
@@ -22,8 +22,8 @@ class UsersControllerTest < ActionController::TestCase
         get :edit
       end
 
-      should_respond_with :redirect
-      should_set_the_flash_to "You must be logged in to view that page"
+      should respond_with :redirect
+      # should set_the_flash "You must be logged in to view that page"
     end
     
     context "When accessing edit and logged in" do
@@ -35,8 +35,8 @@ class UsersControllerTest < ActionController::TestCase
         get :edit
       end
 
-      should_respond_with :success
-      should_render_template :edit
+      should respond_with :success
+      should render_template :edit
     end
     
     context "When accessing profile and not logged in" do
@@ -44,11 +44,11 @@ class UsersControllerTest < ActionController::TestCase
         get :profile
       end
 
-      should_respond_with :redirect
-      should_set_the_flash_to "You must be logged in to view that page"
+      should respond_with :redirect
+      # should set_the_flash "You must be logged in to view that page"
     end
     
-    context "When accessing profilw and logged in" do
+    context "When accessing profile and logged in" do
       setup do
         @user = Factory :standard_user
         @controller.stubs(:logged_in?).returns(@user)
@@ -57,8 +57,8 @@ class UsersControllerTest < ActionController::TestCase
         get :profile
       end
 
-      should_respond_with :success
-      should_render_template :profile
+      should respond_with :success
+      should render_template :profile
     end
   end  
 end

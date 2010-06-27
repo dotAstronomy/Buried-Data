@@ -13,9 +13,9 @@ class DatasetsControllerTest < ActionController::TestCase
         get :index
       end
     
-      should_respond_with :success
-      should_render_template :index
-      should_respond_with_content_type :html
+      should respond_with :success
+      should render_template :index
+      should respond_with_content_type :html
     end
     
     context "#show not logged in" do
@@ -25,9 +25,9 @@ class DatasetsControllerTest < ActionController::TestCase
         get :show, { :id => @dataset.id }
       end
 
-      should_respond_with :success
-      should_render_template :show
-      should_respond_with_content_type :html
+      should respond_with :success
+      should render_template :show
+      should respond_with_content_type :html
     end
     
     context "#new not logged in" do
@@ -35,8 +35,8 @@ class DatasetsControllerTest < ActionController::TestCase
         get :new
       end
 
-      should_respond_with :redirect
-      should_set_the_flash_to "You must be logged in to view that page"
+      should respond_with :redirect
+      # should set_the_flash "You must be logged in to view that page"
     end
     
     context "#edit not logged in" do
@@ -45,8 +45,8 @@ class DatasetsControllerTest < ActionController::TestCase
         get :edit, { :id => @dataset.id }
       end
 
-      should_respond_with :redirect
-      should_set_the_flash_to "You must be logged in to view that page"
+      should respond_with :redirect
+      # should set_the_flash "You must be logged in to view that page"
     end
   end
 end

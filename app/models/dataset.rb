@@ -1,4 +1,5 @@
 class Dataset < ActiveRecord::Base
+  has_many :descriptor_values, :as => :descriptable
   belongs_to :user
   belongs_to :share_policy
   has_many :attachables

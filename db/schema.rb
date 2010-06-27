@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100609093520) do
+ActiveRecord::Schema.define(:version => 20100627190855) do
 
   create_table "attachables", :force => true do |t|
     t.integer  "dataset_id"
@@ -33,9 +33,46 @@ ActiveRecord::Schema.define(:version => 20100609093520) do
     t.boolean  "available"
   end
 
+  create_table "descriptor_values", :force => true do |t|
+    t.string   "value"
+    t.integer  "descriptor_id"
+    t.integer  "descriptable_id"
+    t.string   "descriptable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "descriptor_values", ["descriptable_id"], :name => "index_descriptor_values_on_descriptable_id"
+  add_index "descriptor_values", ["descriptable_type"], :name => "index_descriptor_values_on_descriptable_type"
+  add_index "descriptor_values", ["descriptor_id"], :name => "index_descriptor_values_on_descriptor_id"
+
+  create_table "descriptors", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.string   "kind"
+    t.boolean  "required"
+    t.string   "default_value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "share_policies", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "template_descriptors", :force => true do |t|
+    t.integer  "template_id"
+    t.integer  "descriptor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "templates", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
